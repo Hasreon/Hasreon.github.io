@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+	    <div class="header dark-blue-row">
+	    	<div class="clear mobile-center-text">
+		      <a href="/" class="logo left mobile-no-float uppercase">{{ site.title }}</a>
+		      <ul class="navigation inline-list right mobile-full mobile-container-full">
+		        <li><a href="/about.html">About</a></li>
+		        <li><a href="/blog.html">Blog</a></li>
+		      </ul>
+			</div>
+		</div>
+    	<div class="row clear">
+		  {% unless page.type == post %}
+		  <h2>{{ page.title }}</h2>
+		  {% endunless %}
+		  <p>
+		  	{{ content }}
+		  </p>
+		</div>
+        {{ content }}
+
+    </body>
+</html>
