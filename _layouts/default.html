@@ -7,24 +7,35 @@
 	<link href="/assets/css/base.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-	    <div class="header dark-blue-row">
-	    	<div class="clear mobile-center-text">
-		      <a href="/" class="logo left mobile-no-float uppercase">{{ site.title }}</a>
-		      <ul class="navigation inline-list right mobile-full mobile-container-full">
-		        <li><a href="/about.html">About</a></li>
-		        <li><a href="/blog.html">Blog</a></li>
-		      </ul>
-			</div>
-		</div>
-    	<div class="row clear">
-		  {% unless page.type == post %}
-		  <h2>{{ page.title }}</h2>
-		  {% endunless %}
-		  <p>
-		  	{{ content }}
-		  </p>
-		</div>
-        {{ content }}
+<div class="header dark-blue-row">
+  <div class="container row-4 tablet-row-3 mobile-row-3">
+    <div class="clear mobile-center-text">
+      <a href="/" class="left mobile-no-float uppercase">{{site.title}}</a>
+      <ul class="navigation inline-list right no-mobile">
+        <li><a class="active" href="/">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
+<div class="row">
+  <div class="container introduction-block clear thin">
+  	<h2>{{site.title}}</h2>
+	{{content}}
+  </div>
+</div>
+
+<div class="footer">
+  <div class="container clear">
+    <div class="left col-6 left-text mobile-full mobile-left-text">
+      Built with love by <a title=":)" href="http://www.matthewhartman.com.au">Matthew Hartman</a> in Australia.
+    </div>
+    <div class="right col-6 right-text mobile-full mobile-left-text">
+      <ul class="inline-list footer-list">
+      <li><a href="/base/docs/">Docs</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
     </body>
 </html>
